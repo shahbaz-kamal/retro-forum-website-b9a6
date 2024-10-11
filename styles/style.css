@@ -1,3 +1,6 @@
 .font-mulish {
   font-family: "Mulish", sans-serif;
 }
+.rotate-x-180 {
+  transform: rotatey(180deg);
+}
