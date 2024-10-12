@@ -49,13 +49,16 @@
               "color-counter": "rgba(18, 19, 45, 0.8)",
               "color-card": "#F3F3F5",
               "color-card-secondary": "rgba(18, 19, 45, 0.05)",
+              "color-card-tertiary": "rgba(18, 19, 45, 0.15)",
+              "color-footer-bottom": "rgba(18, 19, 45, 0)",
+              "color-footer-top": "rgba(18, 19, 45, 0.05)",
             },
           },
         },
       };
     </script>
   </head>
-  <body class="min-h-[100vh] font-mulish p-0 m-0 pb-44">
+  <body class="min-h-[100vh] font-mulish p-0 m-0">
     <!-- Section:Header -->
     <header class="w-11/12 lg:w-10/12 mx-auto mb-8 md:mb-12 lg:mb-16">
       <!-- *navbar -->
@@ -227,21 +230,19 @@
           app. The integrated testing features allow for a streamlined .
         </p>
 
-        <!-- //cards container -->
+        <!-- //both cards container -->
         <div
           class="flex flex-col md:flex-row justify-between md:items-start gap-6 md:gap-0"
         >
-          <!-- ?left side -->
-          <div
-            class="md:w-[60%] lg:w-[64%] border border-red-500 space-y-4 md:space-y-6"
-          >
+          <!-- ?left side card container -->
+          <div class="md:w-[60%] lg:w-[64%] space-y-4 md:space-y-6">
             <!-- !card that needs to created from API -->
             <div
               class="p-4 md:p-6 lg:p-10 bg-color-card rounded-[32px] flex gap-5 md:gap-6"
             >
               <!-- //image container -->
               <div
-                class="w-14 h-14 md:w-[72px] md:h-[72px] relative border border-red-600 rounded-2xl flex-shrink-0"
+                class="w-14 h-14 md:w-[72px] md:h-[72px] relative rounded-2xl flex-shrink-0"
               >
                 <img
                   class="rounded-2xl w-full h-full object-cover"
@@ -316,7 +317,7 @@
             >
               <!-- //image container -->
               <div
-                class="w-14 h-14 md:w-[72px] md:h-[72px] relative border border-red-600 rounded-2xl flex-shrink-0"
+                class="w-14 h-14 md:w-[72px] md:h-[72px] relative rounded-2xl flex-shrink-0"
               >
                 <img
                   class="rounded-2xl w-full h-full object-cover"
@@ -386,9 +387,9 @@
               </div>
             </div>
           </div>
-          <!-- ?Right side -->
+          <!-- ?Right side card container -->
           <div
-            class="md:w-[39%] lg:w-[33%] border border-red-500 p-4 md:py-4 md:px-2 lg:p-6 rounded-3xl bg-color-card-secondary"
+            class="md:w-[39%] lg:w-[33%] border p-4 md:py-4 md:px-2 lg:p-6 rounded-3xl bg-color-card-secondary"
           >
             <div class="flex justify-between mb-3 md:mb-4">
               <h3 class="font-bold text-base md:text-xl text-color-primary">
@@ -399,7 +400,7 @@
                 <p>Mark as read (<span>4</span>)</p>
               </div>
             </div>
-            <!-- !card right side -->
+            <!-- !card right side needs to be appended -->
             <div class="right card container space-y-3 md:space-y-4">
               <div
                 class="flex justify-between mb-3 md:mb-4 bg-white rounded-2xl p-3"
@@ -463,9 +464,195 @@
           />
         </div>
       </section>
+
+      <!-- *Latest post Section -->
+      <section class="mb-8 md:mb-12 lg:mb-16">
+        <h3
+          class="font-black text-color-primary text-center text-3xl md:text-4xl mb-4 md:mb-5 lg:mb-6"
+        >
+          Latest Posts
+        </h3>
+        <p
+          class="text-color-primary opacity-60 text-base md:text-lg max-w-[691px] mx-auto text-center mb-6 md:mb-9 lg:mb-12"
+        >
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated testing features allow for a streamlined .
+        </p>
+        <!-- //card container latest post -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6"
+        >
+          <!-- !cards thats needs to be updated -->
+          <div
+            class="card bg-base-100 shadow-xl text-color-primary border border-color-card-tertiary bg-white"
+          >
+            <figure class="px-3 md:px-4 lg:px-6 pt-3 md:pt-4 lg:pt-6">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="px-3 md:px-4 lg:px-6 mt-3 pb-3 md:pb-4">
+              <div class="flex items-center gap-2 opacity-60 mb-3">
+                <i class="fa-regular fa-calendar"></i>
+                <p>29 January 2024</p>
+              </div>
+
+              <h3 class="font-extrabold text-base md:text-lg mb-3">
+                What will a mars habitat force that impact in our daily life!!!
+              </h3>
+              <p class="opacity-60 text-sm md:text-base mb-3 md:mb-4">
+                Yes, you can run unit tests and view the results directly within
+                the app.
+              </p>
+              <div class="flex gap-3 md:gap-4 flex-shrink-0 items-center">
+                <!-- ?image div -->
+                <div class="w-11 h-11 rounded-full">
+                  <img
+                    class="w-full h-full object-cover rounded-full"
+                    src="./images/tamim.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 class="font-bold text-sm lg:text-base">
+                    Cameron Williamson
+                  </h3>
+                  <p class="opacity-60 text-xs lg:text-sm">Unknown</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- !card 2 thats needs to be updated -->
+          <div
+            class="card bg-base-100 shadow-xl text-color-primary border border-color-card-tertiary bg-white"
+          >
+            <figure class="px-3 md:px-4 lg:px-6 pt-3 md:pt-4 lg:pt-6">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="px-3 md:px-4 lg:px-6 mt-3 pb-3 md:pb-4">
+              <div class="flex items-center gap-2 opacity-60 mb-3">
+                <i class="fa-regular fa-calendar"></i>
+                <p>29 January 2024</p>
+              </div>
+
+              <h3 class="font-extrabold text-base md:text-lg mb-3">
+                What will a mars habitat force that impact in our daily life!!!
+              </h3>
+              <p class="opacity-60 text-sm md:text-base mb-3 md:mb-4">
+                Yes, you can run unit tests and view the results directly within
+                the app.
+              </p>
+              <div class="flex gap-3 md:gap-4 flex-shrink-0 items-center">
+                <!-- ?image div -->
+                <div class="w-11 h-11 rounded-full">
+                  <img
+                    class="w-full h-full object-cover rounded-full"
+                    src="./images/tamim.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 class="font-bold text-sm lg:text-base">
+                    Cameron Williamson
+                  </h3>
+                  <p class="opacity-60 text-xs lg:text-sm">Unknown</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- !cards 3 thats needs to be updated -->
+          <div
+            class="card bg-base-100 shadow-xl text-color-primary border border-color-card-tertiary bg-white"
+          >
+            <figure class="px-3 md:px-4 lg:px-6 pt-3 md:pt-4 lg:pt-6">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="px-3 md:px-4 lg:px-6 mt-3 pb-3 md:pb-4">
+              <div class="flex items-center gap-2 opacity-60 mb-3">
+                <i class="fa-regular fa-calendar"></i>
+                <p>29 January 2024</p>
+              </div>
+
+              <h3 class="font-extrabold text-base md:text-lg mb-3">
+                What will a mars habitat force that impact in our daily life!!!
+              </h3>
+              <p class="opacity-60 text-sm md:text-base mb-3 md:mb-4">
+                Yes, you can run unit tests and view the results directly within
+                the app.
+              </p>
+              <div class="flex gap-3 md:gap-4 flex-shrink-0 items-center">
+                <!-- ?image div -->
+                <div class="w-11 h-11 rounded-full">
+                  <img
+                    class="w-full h-full object-cover rounded-full"
+                    src="./images/tamim.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 class="font-bold text-sm lg:text-base">
+                    Cameron Williamson
+                  </h3>
+                  <p class="opacity-60 text-xs lg:text-sm">Unknown</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Section:Footer -->
-    <footer></footer>
+    <footer
+      class="bg-gradient-to-b from-color-footer-top to-color-footer-bottom border flex flex-col items-center justify-center py-6 md:py-10 lg:py-14"
+    >
+      <div
+        class="font-black text-3xl lg:text-4xl hover:bg-color-hover-primary px-2 hover:rounded-lg z-10 text-color-primary mb-3 md:mb-4"
+      >
+        <a class="flex items-center"
+          >SC
+          <span class="inline-block h-10 lg:h-12"
+            ><img class="h-full" src="./images/scooby.png" alt="" /></span
+          >BY</a
+        >
+      </div>
+      <p
+        class="text-color-primary opacity-40 max-w-[604px] mb-4 md:mb-5 lg:mb-8 text-center text-sm md:text-base px-2 md:px-0"
+      >
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It
+        has roots in a piece of classical Latin literature from 45 BC
+      </p>
+
+      <div class="flex gap-8 mb-6 md:mb-8 lg:mb-10">
+        <div class="flex items-center justify-center h-6 text-2xl">
+          <i class="fa-brands fa-square-x-twitter"></i>
+        </div>
+        <div class="flex items-center justify-center h-6 text-2xl">
+          <i class="fa-brands fa-facebook-f"></i>
+        </div>
+        <div class="flex items-center justify-center h-6 text-2xl">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="flex items-center justify-center h-6 text-2xl">
+          <i class="fa-brands fa-github"></i>
+        </div>
+      </div>
+      <hr
+        class="mb-6 md:mb-8 lg:mb-10 border-[#30325E] opacity-10 border-t-1 z-100 w-full"
+      />
+      <p class="font-light text-color-primary opacity-50 text-sm md:text-base">
+        <span>&copy</span> 2024, All Rights Reserved.
+      </p>
+    </footer>
     <!-- Script:Linking JS Files -->
     <script src="./js/index.js"></script>
   </body>

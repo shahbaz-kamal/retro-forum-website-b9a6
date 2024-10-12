@@ -1,3 +1,4 @@
+// *Functions for navbar hamburger menue icon
 document.getElementById("hamburger").addEventListener("click", function () {
   document.getElementById("sidebar").classList.remove("hidden");
   console.log("clicked");
