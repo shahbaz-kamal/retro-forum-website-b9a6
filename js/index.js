@@ -50,9 +50,10 @@ const displayAllPosts = async (posts) => {
                   src=${image}
                   alt=""
                 />
-                <div
-                  class="absolute -top-1 -right-1 w-4 h-4 bg-green-600 rounded-full z-100"
+                <div id="status-${id}"
+                  class="absolute -top-1 -right-1 w-4 h-4  rounded-full z-100"
                 ></div>
+               
               </div>
               <!-- //text container -->
               <div class="w-full">
@@ -113,6 +114,7 @@ const displayAllPosts = async (posts) => {
     `;
 
     postContainer.appendChild(div);
+    handleActive(id, isActive);
   });
 };
 
@@ -147,6 +149,17 @@ const handleRightSide = (description, viewCount) => {
 const handleSearchCategory = () => {
   const searchText = document.getElementById("search-category").value;
   loadAllPosts(searchText);
+};
+
+// *Active functionality
+
+const handleActive = (id, isActive) => {
+  const statusSitation = document.getElementById(`status-${id}`);
+  if (isActive === true) {
+    statusSitation.classList.add("bg-green-600");
+  } else {
+    statusSitation.classList.add("bg-red-600");
+  }
 };
 
 // *calling function globaly
