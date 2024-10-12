@@ -140,7 +140,7 @@
       <!-- *hero section -->
       <section>
         <div
-          class="hero bg-color-hero-fill rounded-[32px] p-11 md:p-10 lg:p-20"
+          class="hero bg-color-hero-fill rounded-[32px] py-11 px-4 md:p-10 lg:p-20"
           style="background-image: url(./images/bgbanner.png)"
         >
           <div class="hero-overlay bg-opacity-0"></div>
@@ -155,7 +155,7 @@
                 Welcome to the
                 <span
                   class="bg-gradient-to-r from-[#797DFC] to-[#797DFC]/20 bg-clip-text text-transparent"
-                  >ReTro</span
+                  >ScOOby</span
                 >
                 Forum
               </h2>
@@ -166,11 +166,13 @@
               </p>
               <div class="relative w-full md:max-w-[400px]">
                 <input
+                  id="search-category"
                   type="text"
                   placeholder="Search here anything"
                   class="input w-full rounded-[50px] py-3 md:py-4 placeholder:font-medium placeholder:text-sm md:placeholder:text-base placeholder:text-color-placeholder text-black"
                 />
                 <button
+                  onclick="handleSearchCategory()"
                   class="absolute top-1/2 right-1 transform -translate-y-1/2 font-bold text-white bg-color-btn-primary text-base md:text-xl px-5 md:px-4 lg:px-7 py-2 md:py-1 lg:py-2 rounded-[46px]"
                 >
                   Search
@@ -235,12 +237,14 @@
           class="flex flex-col md:flex-row justify-between md:items-start gap-6 md:gap-0"
         >
           <!-- ?left side card container -->
-          <div class="md:w-[60%] lg:w-[64%] space-y-4 md:space-y-6">
+          <div
+            id="post-container"
+            class="md:w-[60%] lg:w-[64%] space-y-4 md:space-y-6"
+          >
             <!-- !card that needs to created from API -->
-            <div
+            <!-- <div
               class="p-4 md:p-6 lg:p-10 bg-color-card rounded-[32px] flex gap-5 md:gap-6"
             >
-              <!-- //image container -->
               <div
                 class="w-14 h-14 md:w-[72px] md:h-[72px] relative rounded-2xl flex-shrink-0"
               >
@@ -253,7 +257,7 @@
                   class="absolute -top-1 -right-1 w-4 h-4 bg-green-600 rounded-full z-100"
                 ></div>
               </div>
-              <!-- //text container -->
+
               <div>
                 <div
                   class="flex gap-5 items-center font-medium text-xs md:text-sm text-color-primary opacity-80 mb-2 md:mb-3"
@@ -275,7 +279,7 @@
                 <hr
                   class="border-dashed border border-color-primary opacity-25 mb-4 md:mb-5"
                 />
-                <!-- //counter container-->
+
                 <div class="flex justify-between">
                   <div
                     class="flex gap-5 md:gap-6 text-color primary opacity-60"
@@ -310,82 +314,7 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- !card 2 that needs to created from API -->
-            <div
-              class="p-4 md:p-6 lg:p-10 bg-color-card rounded-[32px] flex gap-5 md:gap-6"
-            >
-              <!-- //image container -->
-              <div
-                class="w-14 h-14 md:w-[72px] md:h-[72px] relative rounded-2xl flex-shrink-0"
-              >
-                <img
-                  class="rounded-2xl w-full h-full object-cover"
-                  src="./images/tamim.jpg"
-                  alt=""
-                />
-                <div
-                  class="absolute -top-1 -right-1 w-4 h-4 bg-green-600 rounded-full z-100"
-                ></div>
-              </div>
-              <!-- //text container -->
-              <div>
-                <div
-                  class="flex gap-5 items-center font-medium text-xs md:text-sm text-color-primary opacity-80 mb-2 md:mb-3"
-                >
-                  <p># Music</p>
-                  <p>Author : Awlad Hossain</p>
-                </div>
-                <h3
-                  class="font-bold text-base md:text-xl text-color-primary mb-3 md:mb-4"
-                >
-                  10 Kids Unaware of Their Halloween Costume
-                </h3>
-                <p
-                  class="text-color-primary text-sm md:text-base opacity-60 mb-4 md:mb-5"
-                >
-                  It’s one thing to subject yourself to ha Halloween costume
-                  mishap because, hey that’s your prerogative
-                </p>
-                <hr
-                  class="border-dashed border border-color-primary opacity-25 mb-4 md:mb-5"
-                />
-                <!-- //counter container-->
-                <div class="flex justify-between">
-                  <div
-                    class="flex gap-5 md:gap-6 text-color primary opacity-60"
-                  >
-                    <div class="flex gap-1 items-center">
-                      <div
-                        class="text-base w-4 h-4 md:w-5 md:h-5 md:text-[20px] flex items-center p-1 rotate-x-180"
-                      >
-                        <i class="fa-regular fa-comment-dots"></i>
-                      </div>
-                      <p class="text-sm md:text-base">560</p>
-                    </div>
-                    <div class="flex gap-1 items-center">
-                      <div
-                        class="text-base w-4 h-4 md:w-5 md:h-5 md:text-[20px] flex items-center p-1 rotate-x-180"
-                      >
-                        <i class="fa-regular fa-eye"></i>
-                      </div>
-                      <p class="text-sm md:text-base">1568</p>
-                    </div>
-                    <div class="flex gap-1 items-center">
-                      <div
-                        class="text-base w-4 h-4 md:w-5 md:h-5 md:text-[20px] flex items-center p-1 rotate-x-180"
-                      >
-                        <i class="fa-regular fa-clock"></i>
-                      </div>
-                      <p class="text-sm md:text-base">5 min</p>
-                    </div>
-                  </div>
-                  <div class="rounded-full bg-[#10B981] px-2 py-1">
-                    <i class="fa-regular fa-envelope text-white"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </div> -->
           </div>
           <!-- ?Right side card container -->
           <div
@@ -397,12 +326,15 @@
               </h3>
               <div class="flex gap-2 items-center">
                 <i class="fa-solid fa-check-double text-[#3DCE09]"></i>
-                <p>Mark as read (<span>4</span>)</p>
+                <p>Mark as read (<span id="mark-read">0</span>)</p>
               </div>
             </div>
             <!-- !card right side needs to be appended -->
-            <div class="right card container space-y-3 md:space-y-4">
-              <div
+            <div
+              id="right-card-container"
+              class="right-card space-y-3 md:space-y-4"
+            >
+              <!-- <div
                 class="flex justify-between mb-3 md:mb-4 bg-white rounded-2xl p-3"
               >
                 <h3 class="font-bold text-sm md:text-base text-color-primary">
@@ -414,20 +346,7 @@
                   </div>
                   <p class="text-sm md:text-base">1568</p>
                 </div>
-              </div>
-              <div
-                class="flex justify-between mb-3 md:mb-4 bg-white rounded-2xl p-3"
-              >
-                <h3 class="font-bold text-sm md:text-base text-color-primary">
-                  10 Kids Unaware of Their Halloween Costume
-                </h3>
-                <div class="flex gap-1 items-center">
-                  <div class="flex items-center">
-                    <i class="fa-regular fa-eye"></i>
-                  </div>
-                  <p class="text-sm md:text-base">1568</p>
-                </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
